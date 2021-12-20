@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form id="feedback-form">
+        <h2 class="header">Register Today</h2>
+        <div>
+            <input type="text" name="txtName" id="userName" class="txtfield" placeholder="User Name"
+                onchange="validate(this.id)" required />
+            <label class="errorText"></label>
+        </div>
+        <div>
+            <input type="password" name="txtPassword" id="password" class="txtfield" placeholder="Password"
+                onchange="validate(this.id)" required />
+            <label class="errorText"></label>
+        </div>
+        <div>
+            <input type="number" name="txtAge" id="age" class="txtfield" placeholder="Age" onchange="validate(this.id)"
+                required />
+            <label class="errorText"></label>
+        </div>
+        <div>
+            <input type="text" name="txtAddress" id="address" class="txtfield" placeholder="Address"
+                onchange="validate(this.id)" required />
+            <label class="errorText"></label>
+        </div>
+        <div>
+            <button class="btn" id="btnAdd" onclick="addPerson(event)">Submit</button>
+        </div>
+    </form>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
